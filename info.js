@@ -10,14 +10,7 @@
 */
 
 const site = [
-    {
-        name: 'typing',
-        tag: [5,6],
-        link: 'typing/index.html',
-		img: 'typing.png',
-		date: '2022.07.20',
-        txt: 'e-typing風のタイピングゲーム'
-    },{
+	{
         name: 'number-guessing-game',
         tag: [0,3,4,5],
         link: 'number-guessing-game/index.html',
