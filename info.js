@@ -11,6 +11,13 @@
 
 const site = [
     {
+        name: 'typing',
+        tag: [5,6],
+        link: 'typing/index.html',
+		img: 'typing.png',
+		date: '2022.07.20',
+        txt: 'e-typing風のタイピングゲーム'
+    },{
         name: 'number-guessing-game',
         tag: [0,3,4,5],
         link: 'number-guessing-game/index.html',
@@ -33,7 +40,8 @@ const tag = [
     '記事',
     '頭脳系',
     'パズル',
-    '暇つぶし'
+    '暇つぶし',
+    'タイピング'
 ];
 
 const header_menu = [
@@ -42,6 +50,15 @@ const header_menu = [
         link: 'feedback'
     }
 ]
+
+const $doc = document;
+let site_name;
+
+const loc = {
+    href: location.href,
+    hash: location.hash.replace('#',''),
+    search: Number(location.search.replace('?','')),
+}
 
 function $(dom) {
     if (dom.startsWith('.')) {
@@ -53,95 +70,95 @@ function $(dom) {
     }}
 }
 
-const $doc = document;
-let site_name = location.href.split('/').pop().replace('.html','');
-if (site_name == '') {
-    site_name = 'index';
-}
-
 var new_elm, text_box;
-function create(tag) {
-    new_elm = $doc.createElement(tag);
-}
+    function create(tag) {
+        new_elm = $doc.createElement(tag);
+    }
 
-function apC() {
-	text_box.appendChild(new_elm);
-}
+    function apC() {
+        text_box.appendChild(new_elm);
+    }
 
-function inB() {
-    text_box.insertBefore(new_elm,text_box.firstChild);
-}
+    function inB() {
+        text_box.insertBefore(new_elm,text_box.firstChild);
+    }
 
-const loc = {
-    href: location.href,
-    hash: location.hash.replace('#',''),
-    search: Number(location.search.replace('?','')),
-}
 
-// header
-var a = loc.href.split('/');
-var b = a.length - a.indexOf('pi-game') - 2;
-var c = '';
-for (i=0; i<b; i++) {
-    c += '../';
-}
+window.onload = function() {
+    // header
+    var a = loc.href.split('/');
+    var b = a.length - a.indexOf('pi-game') - 2;
+    var c = '';
+    for (i=0; i<b; i++) {
+        c += '../';
+    }
 
-// header
-text_box = $('body')[0];
-create('header');
-inB();
+    console.log(c == '')
+    console.log(loc.href.split('/').pop().replace('.html',''))
+    if (c == '') {
+        site_name = loc.href.split('/').pop().replace('.html','');
+    } else {
+        site_name = ''
+    }
+    console.log(site_name)
 
-// a:index.html
-text_box = $('header')[0];
-create('a')
-new_elm.id = 'header_a';
-new_elm.href = c + 'index.html';
-apC();
+    // header
+    text_box = $('body')[0];
+    create('header');
+    inB();
 
-// img:favicon.jpeg
-text_box = $('#header_a');
-create('img');
-new_elm.src = c + 'img/favicon.jpeg';
-new_elm.alt = 'title';
-new_elm.height = '100';
-new_elm.align = 'left';
-apC();
-
-// h1#site_title
-text_box = $('header')[0];
-create('h1');
-new_elm.id = 'site_title';
-new_elm.innerText = 'pi-game';
-apC();
-
-// ul#header_menu_group
-create('ul');
-new_elm.id = 'header_menu_group';
-apC();
-
-text_box = $('#header_menu_group');
-for (i=0; i<header_menu.length; i++) {
-    // li.header_menu_item
-    create('li');
-    new_elm.className = 'header_menu_item';
+    // a:index.html
+    text_box = $('header')[0];
+    create('a')
+    new_elm.id = 'header_a';
+    new_elm.href = c + 'index.html';
     apC();
 
-    // a
-    text_box = $('.header_menu_item')[$('.header_menu_item').length - 1]
-    create('a');
-    new_elm.href = c + header_menu[i].link + '.html';
-    new_elm.innerText = header_menu[i].txt;
+    // img:favicon.png
+    text_box = $('#header_a');
+    create('img');
+    new_elm.src = c + 'img/favicon.png';
+    new_elm.alt = 'title';
+    new_elm.height = '100';
+    new_elm.align = 'left';
     apC();
-}
 
-//link:page.css
-text_box = $('head')[0];
-create('link');
-new_elm.rel = 'stylesheet';
-new_elm.href = c + 'page.css';
-apC();
+    // h1#site_title
+    text_box = $('header')[0];
+    create('h1');
+    new_elm.id = 'site_title';
+    new_elm.innerText = 'pi-game';
+    apC();
 
-// title
-if (site_name != 'index') {
-    $('title')[0].innerText += ' |pi-game';
+    // ul#header_menu_group
+    create('ul');
+    new_elm.id = 'header_menu_group';
+    apC();
+
+    text_box = $('#header_menu_group');
+    for (i=0; i<header_menu.length; i++) {
+        // li.header_menu_item
+        create('li');
+        new_elm.className = 'header_menu_item';
+        apC();
+
+        // a
+        text_box = $('.header_menu_item')[$('.header_menu_item').length - 1]
+        create('a');
+        new_elm.href = c + header_menu[i].link + '.html';
+        new_elm.innerText = header_menu[i].txt;
+        apC();
+    }
+
+    //link:page.css
+    text_box = $('head')[0];
+    create('link');
+    new_elm.rel = 'stylesheet';
+    new_elm.href = c + 'page.css';
+    apC();
+
+    // title
+    if (site_name != 'index') {
+        $('title')[0].innerText += ' |pi-game';
+    }
 }
