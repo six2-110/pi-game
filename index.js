@@ -100,5 +100,5 @@ for (i=0; i<tag.length; i++) {
 }
 
 if (site_name != 'index') {
-	$('#contents_h1').innerText = '#' + tag[loc.search];
+	$('#main_h1').innerText = '#' + tag[loc.search];
 }
