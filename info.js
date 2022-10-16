@@ -76,70 +76,74 @@ var new_elm, text_box;
     }
 
 
-window.onload = function() {
-    // header
-    var a = loc.href.split('/');
-    var b = a.length - a.indexOf('pi-game') - 2;
-    var c = '';
-    for (i=0; i<b; i++) {
-        c += '../';
-    }
-
-    // header
-    text_box = $('body')[0];
-    create('header');
-    inB();
-
-    // a:index.html
-    text_box = $('header')[0];
-    create('a')
-    new_elm.id = 'header_a';
-    new_elm.href = c + 'index.html';
-    apC();
-
-    // img:favicon.png
-    text_box = $('#header_a');
-    create('img');
-    new_elm.src = c + 'img/favicon.png';
-    new_elm.alt = 'title';
-    new_elm.height = '100';
-    new_elm.align = 'left';
-    apC();
-
-    // h1#site_title
-    text_box = $('header')[0];
-    create('h1');
-    new_elm.id = 'site_title';
-    new_elm.innerText = 'pi-game';
-    apC();
-
-    // ul#header_menu_group
-    create('ul');
-    new_elm.id = 'header_menu_group';
-    apC();
-
-    text_box = $('#header_menu_group');
-    for (i=0; i<header_menu.length; i++) {
-        // li.header_menu_item
-        create('li');
-        new_elm.className = 'header_menu_item';
-        apC();
-
-        // a
-        text_box = $('.header_menu_item')[$('.header_menu_item').length - 1]
-        create('a');
-        new_elm.href = c + header_menu[i].link + '.html';
-        new_elm.innerText = header_menu[i].txt;
-        apC();
-    }
-
-    //link:page.css
-    text_box = $('head')[0];
-    create('link');
-    new_elm.rel = 'stylesheet';
-    new_elm.href = c + 'page.css';
-    apC();
-
-    // title
-    $('title')[0].innerText += ' |pi-game';
+// header
+var a = loc.href.split('/');
+var b = a.length - a.indexOf('pi-game') - 2;
+var c = './';
+for (i=0; i<b; i++) {
+    c += '../';
 }
+
+// header
+text_box = $('body')[0];
+create('header');
+inB();
+
+// a:index.html
+text_box = $('header')[0];
+create('a')
+new_elm.id = 'header_a';
+new_elm.href = c + 'index.html';
+apC();
+
+// img:favicon.png
+text_box = $('#header_a');
+create('img');
+new_elm.src = c + 'img/favicon.png';
+new_elm.alt = 'title';
+new_elm.height = '100';
+new_elm.align = 'left';
+apC();
+
+// h1#site_title
+text_box = $('header')[0];
+create('h1');
+new_elm.id = 'site_title';
+new_elm.innerText = 'pi-game';
+apC();
+
+// ul#header_menu_group
+create('ul');
+new_elm.id = 'header_menu_group';
+apC();
+
+text_box = $('#header_menu_group');
+for (i=0; i<header_menu.length; i++) {
+    // li.header_menu_item
+    create('li');
+    new_elm.className = 'header_menu_item';
+    apC();
+
+    // a
+    text_box = $('.header_menu_item')[$('.header_menu_item').length - 1]
+    create('a');
+    new_elm.href = c + header_menu[i].link + '.html';
+    new_elm.innerText = header_menu[i].txt;
+    apC();
+}
+
+//link:page.css
+text_box = $('head')[0];
+create('link');
+new_elm.rel = 'stylesheet';
+new_elm.href = c + 'page.css';
+apC();
+
+// favicon
+create('link');
+new_elm.rel = 'shortcut icon';
+new_elm.href = c + 'img/favicon.png';
+apC();
+
+// title
+$('title')[0].innerText += ' |pi-game';
