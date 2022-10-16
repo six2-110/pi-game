@@ -10,7 +10,7 @@
 */
 
 const site = [
-	{
+    {
         name: 'number-guessing-game',
         tag: [0,3,4,5],
         link: 'number-guessing-game/index.html',
@@ -45,7 +45,6 @@ const header_menu = [
 ]
 
 const $doc = document;
-let site_name;
 
 const loc = {
     href: location.href,
@@ -85,15 +84,6 @@ window.onload = function() {
     for (i=0; i<b; i++) {
         c += '../';
     }
-
-    console.log(c == '')
-    console.log(loc.href.split('/').pop().replace('.html',''))
-    if (c == '') {
-        site_name = loc.href.split('/').pop().replace('.html','');
-    } else {
-        site_name = ''
-    }
-    console.log(site_name)
 
     // header
     text_box = $('body')[0];
@@ -151,7 +141,5 @@ window.onload = function() {
     apC();
 
     // title
-    if (site_name != 'index') {
-        $('title')[0].innerText += ' |pi-game';
-    }
+    $('title')[0].innerText += ' |pi-game';
 }
