@@ -8,10 +8,16 @@ for (i=0; i<site.length; i++) {
     new_elm.id = 'page' + i;
     apC();
 	
+	text_box = $('#page'+i);
+
+	//div.page_date
+	create('div');
+	new_elm.className = 'page_date';
+	new_elm.innerText = '最終更新日. ' + site[i].date;
+	apC();
+
 	 //a.page_tag
     for (i2=0; i2<site[i].tag.length; i2++) {
-		text_box = $('#page'+i);
-
         create('a');
         new_elm.href = 'tag.html?' + site[i].tag[i2];
         new_elm.innerText = '#' + tag[site[i].tag[i2]];
@@ -39,12 +45,6 @@ for (i=0; i<site.length; i++) {
 	new_elm.className = 'page_name';
 	new_elm.innerText = site[i].name;
 	new_elm.href = site[i].link;
-	apC();
-	
-	//div.page_date
-	create('div');
-	new_elm.className = 'page_date';
-	new_elm.innerText = '最終更新日. ' + site[i].date;
 	apC();
 	
 	//hr.page_hr
@@ -101,4 +101,6 @@ for (i=0; i<tag.length; i++) {
 
 if (site_name != 'index') {
 	$('#main_h1').innerText = '#' + tag[loc.search];
+} else {
+	$('#main_h1').innerText = 'すべてのコンテンツ';
 }
