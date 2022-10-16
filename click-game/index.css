@@ -1,112 +1,60 @@
 body{
-    background: #f0f8ff;
+    background-color:#f0f8ff;user-select:none;
 }
 
-h1{
-    font-size: 25pt;
+.center{
+    text-align:center;
+}
+#text_click{
+    font-size:30px;font-weight:bolder;
 }
 
-div#memo{
-    background-color: #fddea5;
-    padding: 10px;
-    margin-top: 30px;
+#button_click{
+
+    user-select:none;
+    font-size:30px;
+    text-align:center;
+    margin:0 0 50px 30px;
+    padding:20px;
+    color:#fff;
 }
 
-div#memo > hr{
-    border: 1px solid #777;
-    width: 80%;
-    margin-left: 0px;
+#button_click{
+
+    background:#00a2ff;
+    border:1px solid #00a2ff;
+    color:#fff;
+    transition:all .15s ease;
 }
 
-div#memo > h1{
-    font-size: 25pt;
+#button_click:hover{
+
+    background:#fff;
+    color:#00a2ff;
+    transition:all .3s ease;
 }
 
-div#memo > p{
-    font-size: 19pt;
-    line-height: 15px;
+.btn{
+    user-select:none;
+    font-size:19px;
+    text-align:center;
+    background:#7fffd4;
+    color:#fff;
+    border:1px solid #7fffd4;
+    padding:10px 20px 10px 20px;
+    margin:0 0 10px 10px;
+    transition:all .15s ease;
 }
 
-#main{
-    display: table;
-    width: 100%;
-    margin-top: 20px;
-    border-collapse: separate;
-    border-spacing: 0px 0;
+.btn:hover{
+    background:#fff;
+    color:#7fffd4;
+    transition:all .3s ease
+}
+#progress{
+    font-size:30px;
 }
 
-#main > div{
-    list-style: none;
-    display: table-cell;
-    margin: 0 5px;
-    padding: 10px;
-}
-
-#contents{
-    background-color: #fffae6;
-}
-
-#tag{
-    width: 300px;
-    background-color: #0f0;
-}
-
-li{
-	list-style: none;
-}
-
-#contents_h1{
-    font-size: 25pt;
-}
-
-.page{
-    border-radius: 10px;
-    background-color: #ccffff;
-    font-size: 22.5pt;
-    padding: 5px;
-    margin-top: 10px;
-}
-
-.page_tag{
-    padding-top: 10px;
-    font-size: 15pt;
-}
-
-.page_img{
-    text-align: left;
-    width: 100px;
-    height: 100px;
-}
-
-.page_name{
-    padding-left: 5px;
-    font-size: 50pt;
-}
-
-.page_date{
-    font-size: 15pt;
-    float: right;
-	font-family: monospace;
-    position: relative;
-    right: 10px;
-    top: 10px;
-}
-
-.page_hr{
-	border: 1px solid #aaa;
-}
-
-.page_txt{
-	font-size: 19pt;
-	margin-top: -10px;
-}
-
-#tag_table{
-    display: table;
-    font-size: 19pt;
-    width: 100%;
-}
-
-.tag_table_cell{
-    display: table-cell;
+#progress_text{
+    font-size:30px;margin-left:-30px;
 }
