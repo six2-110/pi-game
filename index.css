@@ -104,6 +104,7 @@ li{
 #tag_table{
     display: table;
     font-size: 19pt;
+    width: 100%;
 }
 
 .tag_table_cell{
