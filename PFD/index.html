@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>素因数分解ゲーム</title>
+    <style>
+        body{
+            background-color: #f0f8ff; /* 背景色設定 */
+            overflow: hidden; /* スクロール禁止 */
+				user-select: none; /* 選択禁止 */
+        }
+        a:hover{
+            text-decoration: none;
+        }
+
+        /* フォント指定 */
+        @font-face {
+            font-family: 'azuki';
+            src: url(azuki.ttf);
+        }
+
+        div#play, div#result{
+            display: none;
+        }
+
+
+        /* ---home--- */
+        /* mode */
+        div#mode_select{
+            text-align: center;
+            font-family: azuki;
+            font-size: 20pt;
+        }
+        a.mode_btn{
+            background-color: #faf0ff;
+            margin: 10px;
+            padding: 10px 15px;
+            height: 50px;
+            border-radius: 25px;
+        }
+        a.mode_btn.active, a.mode_btn:hover{
+            background-color: #dd99ff;
+        }
+
+        /* start */
+        a#start{
+            background-color: #fefff0;
+            opacity: 50%;
+            padding: 10px 15px;
+            height: 50px;
+            border-radius: 25px;
+        }
+        p#start_p{
+            margin-top: 30px;
+        }
+        a#start.active{
+            opacity: 100%;
+        }
+
+
+        /* ---play--- */
+        /* level */
+        p#level_p{
+            height: 30px;
+            font-size: 15pt;
+        }
+        span#level{
+            font-family: azuki;
+            background-color: #faf0ff;
+            padding: 2px 5px;
+            border-radius: 30px;
+        }
+
+        #number{
+            background-color: #f0fff4;
+            font-family: azuki;
+            text-align: center;
+            padding: 10px;
+            font-size: 30pt;
+            border-radius: 30px;
+        }
+		  
+		  div#circle{
+		      width: 100px;
+				height: 100px;
+				position: absolute;
+				border: 10px solid red;
+				border-radius: 100px;
+				top: 50px;
+				left: 50%;
+				margin-left: -50px;
+		  }
+
+        #input_div{
+            display: flex;
+            font-size: 25pt;
+            height: 50px;
+            margin-bottom: 100px;
+        }
+        span#input{
+            background-color: #fff;
+            font-family: azuki;
+            padding: 10px 30px;
+            border-radius: 30px;
+            width: 75%;
+            margin-right: 10px;
+        }
+        a#enter{
+            background-color: #fefff0;
+            border-radius: 30px;
+            padding: 10px;
+            font-family: azuki;
+            width: calc(15% - 10px);
+            margin-right: 10px;
+            text-align: center;
+        }
+
+        div#prime{
+            text-align: center;
+        }
+        a.prime{
+            background-color: #fff0f2;
+            font-size: 20pt;
+            font-family: azuki;
+            margin: 10px;
+            padding: 10px 30px;
+				width: 150px;
+            border-radius: 30px;
+        }
+
+        /* backspace */
+        #backspace_parent{
+            position: relative;
+            display: flex;
+        }
+        #backspace_triangle{
+            width: 25px;
+            height: 50px;
+            clip-path: polygon(100% 0, 100% 100%, 0 50%);
+            background-color: #c0c6cc;
+        }
+        #backspace{
+            background-color: #c0c6cc;
+            width: 50px;
+            height: 50px;
+            margin-left: -1px;
+        }
+        #backspace::before, #backspace::after{
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 3px;
+            height: 50px;
+            background-color: #fff;
+        }
+        /* バツ印 */
+        #backspace::before{
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+        #backspace::after{
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+
+
+        /* ---result--- */
+        
+    </style>
+</head>
+<body>
+    <div id="home">
+        <div id="mode_select">
+            <p>モードを選択してください</p><br>
+            <p id="mode"></p>
+            <p id="start_p"></p>
+        </div>
+    </div>
+
+    <div id="play">
+        <p id="level_p">Level: <span id="level"></span></p>
+		  <div>
+		      <p id="number">2</p>
+				<div id="circle"></div>
+		  </div>
+        <div id="input_div">
+            <span id="input">2 × 3 × 5</span>
+            <a id="enter">Enter</a>
+            <div id="backspace_parent">
+                <div id="backspace_triangle"></div>
+                <div id="backspace"></div>
+            </div>
+        </div>
+        <div id="prime"></div>
+    </div>
+
+    <div id="result">
+        <p>result</p>
+    </div>
+
+    <script src="../info.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
