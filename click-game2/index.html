@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>click-game</title>
+    <style>
+        body{
+            background-color: #f0f8ff;
+            user-select: none;
+        }
+        #canvas{
+            background-color: #aaa;
+            margin-top: 50px;
+        }
+        #explain{
+            padding: 10px;
+            margin-top: 30px;
+            background-color: #fff7f0;
+            font-size: 18pt;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="700" height="500"></canvas>
+    <div id="explain">
+        <h1 style="font-size: 24pt;">click-game2</h1>
+        <p>ただただ、"click"と書かれているボタンを押すだけの暇つぶしゲームです。</p>
+        <p>そのボタンを押せば押すほど、ポイントが増えます</p>
+        <p>下にあるボタンを押すと、そこに書かれているポイントだけ減らされ、一回押すたびに増えるポイントが増えたり、自動でクリックのボタンを押してくれたりするようになります。</p>
+    </div>
+    <script src="../info.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
