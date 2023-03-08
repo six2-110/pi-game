@@ -1,26 +1,22 @@
-/*
-{
-        name: '',
-        tag: [],
-        link: '',
-		img: '',
-		date: '',
-        txt: ''
-    },
-*/
-
 const site = [
     {
+        name: 'click-game2',
+        tag: [0,5],
+        link: 'click-game2/',
+		img: 'click-game2.jpeg',
+		date: '2023.3.8',
+        txt: 'ただただクリックしていくだけのゲーム'
+    },{
         name: 'number-guessing-game',
         tag: [0,3,4,5],
-        link: 'number-guessing-game/index.html',
+        link: 'number-guessing-game/',
 		img: 'number-guessing-game.webp',
 		date: '2022.07.02',
         txt: '0<n≦100を満たす自然数nを6回のチャンスで当てるゲーム'
     },{
         name: 'click-game',
         tag: [0,5],
-        link: 'click-game/index.html',
+        link: 'click-game/',
 		img: 'click-game.jpeg',
 		date: '2022.07.01',
         txt: 'クリックしていくだけのゲーム'
