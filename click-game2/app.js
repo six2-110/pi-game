@@ -232,7 +232,7 @@ setInterval(function() {
 
 // canvasに描画
 function draw() {
-    ctx.clearRect(0, 0, 500, 500) // canvasをリセット
+    ctx.clearRect(0, 0, $canvas.width, $canvas.height) // canvasをリセット
     draw_clickBtn();
     draw_btn(0, `加速度↑ ${btn_point[0]}p`);
     draw_btn(1, `毎秒1クリック ${btn_point[1]}p`);
