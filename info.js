@@ -5,7 +5,7 @@ const site = [
         link: 'pFac/index.html',
 		img: 'pFac.png',
 		date: '2023.3.23',
-        txt: '素因数分解ゲーム'
+        txt: '素因数分解ゲーム　wallprime参考'
     },
     {
         name: 'click-game2',
