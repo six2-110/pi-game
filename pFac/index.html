@@ -5,27 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>素因数分解ゲーム</title>
-<style>
-    body{
-        background-color: #f0f8ff;
-    }
-    #canvas{
-        background-color: #fff7f0;
-        user-select: none;
-    }
-    @font-face {
-        font-family: 'CL';
-        src: url(../fonts/CoalhandLuke.ttf);
-    }
-    @font-face {
-        font-family: 'digital';
-        src: url(../fonts/Let_s_go_Digital_Regular.ttf);
-    }
+    <style>
+        body{
+            background-color: #f0f8ff;
+        }
+        #canvas{
+            background-color: #fff7f0;
+            user-select: none;
+        }
+        #explain{
+            padding: 10px;
+            margin-top: 30px;
+            background-color: #fffef0;
+            font-size: 18pt;
+        }
+        @font-face {
+            font-family: 'CL';
+            src: url(../fonts/CoalhandLuke.ttf);
+        }
+        @font-face {
+            font-family: 'digital';
+            src: url(../fonts/Let_s_go_Digital_Regular.ttf);
+        }
 </style>
 </head>
 <body>
     <canvas id="canvas" width="500" height="500"></canvas>
 
+    <div id="explain">
+        <p>出てきた数字を、タイトルの通り素因数分解するゲームです</p>
+        <p>難易度は5段階に分かれていて、それぞれ素因数に使われる素数の種類の数が変わります</p>
+        <p>ボタンを押して素因数分解しましょう</p>
+    </div>
     <script src="../info.js"></script>
     <script src="app.js"></script>
 </body>
