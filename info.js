@@ -81,14 +81,6 @@ var new_elm, text_box;
 
 
 // header
-var a = loc.href.split('/');
-var b = a.length - a.indexOf('pi-game') - 2;
-var c = './';
-for (i=0; i<b; i++) {
-    c += '../';
-}
-
-// header
 text_box = $('body')[0];
 create('header');
 inB();
@@ -97,13 +89,13 @@ inB();
 text_box = $('header')[0];
 create('a')
 new_elm.id = 'header_a';
-new_elm.href = c + 'index.html';
+new_elm.href = '/index.html';
 apC();
 
 // img:favicon.png
 text_box = $('#header_a');
 create('img');
-new_elm.src = c + 'img/favicon.png';
+new_elm.src = '/favicon.png';
 new_elm.alt = 'title';
 new_elm.height = '100';
 new_elm.align = 'left';
@@ -131,7 +123,7 @@ for (i=0; i<header_menu.length; i++) {
     // a
     text_box = $('.header_menu_item')[$('.header_menu_item').length - 1]
     create('a');
-    new_elm.href = c + header_menu[i].link + '.html';
+    new_elm.href = '/' + header_menu[i].link + '.html';
     new_elm.innerText = header_menu[i].txt;
     apC();
 }
@@ -140,13 +132,13 @@ for (i=0; i<header_menu.length; i++) {
 text_box = $('head')[0];
 create('link');
 new_elm.rel = 'stylesheet';
-new_elm.href = c + 'page.css';
+new_elm.href = '/page.css';
 apC();
 
 // favicon
 create('link');
 new_elm.rel = 'shortcut icon';
-new_elm.href = c + 'img/favicon.png';
+new_elm.href = '/favicon.png';
 apC();
 
 // title
