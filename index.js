@@ -10,12 +10,6 @@ for (i=0; i<site.length; i++) {
 	
 	text_box = $('#page'+i);
 
-	//div.page_date
-	create('div');
-	new_elm.className = 'page_date';
-	new_elm.innerText = '最終更新日. ' + site[i].date;
-	apC();
-
 	 //a.page_tag
     for (i2=0; i2<site[i].tag.length; i2++) {
         create('a');
@@ -56,6 +50,12 @@ for (i=0; i<site.length; i++) {
 	create('div');
 	new_elm.className = 'page_txt';
 	new_elm.innerText = site[i].txt;
+	apC();
+
+	//p.page_date
+	create('p');
+	new_elm.className = 'page_date';
+	new_elm.innerText = '最終更新日. ' + site[i].date;
 	apC();
 	}
 }
@@ -103,4 +103,8 @@ if (site_name != 'index') {
 	$('#main_h1').innerText = '#' + tag[loc.search];
 } else {
 	$('#main_h1').innerText = 'すべてのコンテンツ';
+}
+
+if (window.innerWidth < 768) {
+	$('#tag').style.display = 'none';
 }
