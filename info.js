@@ -44,7 +44,7 @@ const tag = [
 const header_menu = [
     {
         txt: 'フィードバック',
-        link: 'feedback'
+        link: 'https://forms.gle/EUaxUdYYEQcC7TYs5'
     }
 ]
 
@@ -113,20 +113,18 @@ create('ul');
 new_elm.id = 'header_menu_group';
 apC();
 
+// li.header_menu_item
 text_box = $('#header_menu_group');
-for (i=0; i<header_menu.length; i++) {
-    // li.header_menu_item
-    create('li');
-    new_elm.className = 'header_menu_item';
-    apC();
+create('li');
+new_elm.className = 'header_menu_item';
+apC();
 
-    // a
-    text_box = $('.header_menu_item')[$('.header_menu_item').length - 1]
-    create('a');
-    new_elm.href = '/pi-game/' + header_menu[i].link + '.html';
-    new_elm.innerText = header_menu[i].txt;
-    apC();
-}
+// a
+text_box = $('.header_menu_item')[$('.header_menu_item').length - 1]
+create('a');
+new_elm.href = 'https://forms.gle/EUaxUdYYEQcC7TYs5';
+new_elm.innerText = 'feedback';
+apC();
 
 //link:page.css
 text_box = $('head')[0];
