@@ -24,7 +24,7 @@ div#memo > h1{
 
 div#memo > p{
     font-size: 19pt;
-    line-height: 15px;
+    line-height: 150%;
 }
 
 #main{
@@ -33,6 +33,10 @@ div#memo > p{
     margin-top: 20px;
     border-collapse: separate;
     border-spacing: 0px 0;
+}
+
+#main_h1{
+    font-size: clamp(16px, 25pt, 40px);
 }
 
 #main > div{
@@ -80,16 +84,12 @@ li{
 
 .page_name{
     padding-left: 5px;
-    font-size: 50pt;
+    font-size: clamp(30pt, 2.9vw, 50pt);
 }
 
 .page_date{
     font-size: 15pt;
-    float: right;
 	font-family: monospace;
-    position: relative;
-    right: 10px;
-    top: 10px;
 }
 
 .page_hr{
