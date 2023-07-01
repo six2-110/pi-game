@@ -7,12 +7,17 @@ header{
 }
 
 header > h1{
-    font-size: 50pt;
+    font-size: clamp(24px, 10vw, 50px);
     font-family: '游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif;
     font-weight: bolder;
     color: #b22ab3;
     margin-right: auto;
     margin-left: auto;
+    white-space: nowrap;
+}
+
+header > a {
+    font-size: clamp(16px, 3vw, 32px);
 }
 
 /* aタグ */
