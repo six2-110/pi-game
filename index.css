@@ -48,6 +48,7 @@ div#memo > p{
 
 #contents{
     background-color: #fffae6;
+    width: 80vw;
 }
 
 #tag{
@@ -104,7 +105,7 @@ li{
 #tag_table{
     display: table;
     font-size: 19pt;
-    width: 100%;
+    width: 20vw;
 }
 
 .tag_table_cell{
