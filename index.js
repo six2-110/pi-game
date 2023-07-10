@@ -105,6 +105,10 @@ if (site_name != 'index') {
 	$('#main_h1').innerText = 'すべてのコンテンツ';
 }
 
-if (window.innerWidth < 768) {
-	$('#tag').style.display = 'none';
-}
+setInterval(() => {
+	if (window.innerWidth < 768) {
+		$('#tag').style.display = 'none';
+	} else {
+		$('#tag').style.display = 'block';
+	}
+}, 16);
