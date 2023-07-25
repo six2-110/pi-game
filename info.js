@@ -1,10 +1,18 @@
 const site = [
     {
+        name: 'connect4',
+        tag: [0,3,4,5],
+        link: 'pFac/index.html',
+		img: 'connect4.png',
+		date: '2023.07.25',
+        txt: '素因数分解ゲーム　wallprime参考'
+    },
+    {
         name: '素因数分解ゲーム',
         tag: [0,3,5],
         link: 'pFac/index.html',
 		img: 'pFac.png',
-		date: '2023.3.23',
+		date: '2023.03.23',
         txt: '素因数分解ゲーム　wallprime参考'
     },
     {
@@ -12,7 +20,7 @@ const site = [
         tag: [0,5],
         link: 'click-game2/index.html',
 		img: 'click-game2.jpeg',
-		date: '2023.3.8',
+		date: '2023.03.08',
         txt: 'ただただクリックしていくだけのゲーム'
     },{
         name: 'number-guessing-game',
