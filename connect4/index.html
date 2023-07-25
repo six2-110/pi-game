@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>connect4</title>
+    <style>
+        body{
+            background-color: #f0f8ff;
+            user-select: none;
+        }
+        #canvas{
+            background-color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="500px" height="550px" style="user-select: none;"></canvas>
+    <div id="explain">
+        <h1>connect4</h1>
+        <p>プレイヤーが交互に上からコインを落として、自分のコインを縦・横・斜めのいずれかに4つなれべられたら勝ちとなります。</p>
+        <p>画面右下のボタンもしくはキーボードでコインの位置の移動したり、落としたりできます。</p>
+        <p>キーボードでのコインの操作は、移動させる場合は、左右矢印キー、コインを落とすのはエンターキーで行えます。</p>
+        <p>また、「START」や「RETRY」と書かれたボタンもエンターキーで実行させることができます。</p>
+    </div>
+
+    <script src="../info.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
