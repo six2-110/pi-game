@@ -2,10 +2,10 @@ const site = [
     {
         name: 'connect4',
         tag: [0,3,4,5],
-        link: 'pFac/index.html',
+        link: 'connect4/index.html',
 		img: 'connect4.png',
 		date: '2023.07.25',
-        txt: '素因数分解ゲーム　wallprime参考'
+        txt: 'コネクトフォーです。対戦ゲームです。'
     },
     {
         name: '素因数分解ゲーム',
