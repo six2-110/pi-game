@@ -38,3 +38,19 @@ a:visited{
     display: inline-block;
     padding: 10px;
 }
+
+#explain{
+    padding: 10px;
+    margin-top: 30px;
+    background-color: #fff7f0;
+    font-size: 18pt;
+}
+
+#explain > h1{
+    font-size: 24pt;
+}
+
+#explain > p{
+    font-size: 19pt;
+    line-height: 150%;
+}
