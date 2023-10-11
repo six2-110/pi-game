@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #char{
+            border: 1px solid #000;
+            display: block;
+            margin: 10px
+        }
+        #change, #card_num_reset{
+            background-color: #4169e1;
+            border-radius: 10px;
+            font-size: 30pt;
+            border: 1px solid #000;
+            color: #fff;
+            padding: 5px 15px;
+        }
+        .name_input{
+            
+        }
+    </style>
+</head>
+<body>
+    <img id="char" width="150" height="200" src="img/1.png">
+    <button id="change">変更</button>
+    <button id="card_num_reset">カードの枚数リセット</button>
+    <button id="card_reset">ゲームリセット</button>
+    <p id="card_num">枚数: 1</p>
+    <p id="li_len">残り: 50</p>
+
+    <span>得点表</span>
+    <button id="player_plus">プレイヤーを増やす</button>
+    <table id="score-box"></table>
+    <script src="app.js"></script>
+</body>
+</html>
