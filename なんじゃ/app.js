@@ -28,9 +28,11 @@ function set_img_li() {
 }
 
 function change_btn() {
-    img_li.shift();
-    $('char').src = `img/${img_li[0]}.png`;
-    card_num++;
+    if (img_li.length != 1) {
+        img_li.shift();
+        $('char').src = `img/${img_li[0]}.png`;
+        card_num++;
+    }
 }
 
 function card_num_reset() {
