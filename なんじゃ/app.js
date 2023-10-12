@@ -37,6 +37,7 @@ function change_btn() {
 
 function card_num_reset() {
     card_num = 0;
+    $('char').src = '';
 }
 
 function card_reset() {
