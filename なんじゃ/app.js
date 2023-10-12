@@ -36,7 +36,7 @@ function change_btn() {
 }
 
 function card_num_reset() {
-    card_num = 1;
+    card_num = 0;
 }
 
 function card_reset() {
