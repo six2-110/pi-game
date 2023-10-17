@@ -1,10 +1,17 @@
 const $doc = document;
-const num_img = 25;
 const $ = (id) => {
     return $doc.getElementById(id)
 }
-let card_num = 1
-let img_li = []
+let card_num = 0;
+let img_li = [];
+let change_ok = true;
+let num_img = 15
+
+function wait(time) {
+    return new Promise(function(resolve) {
+        setTimeout(resolve, time);
+    });
+}
 
 function count_elm(elm) {
     var res = 0;
@@ -17,32 +24,39 @@ function count_elm(elm) {
 }
 
 function set_img_li() {
+    num_img = Number($('how_many_kind_chars').value)
     img_li = [];
-    num_same_elm = 3
+    num_same_elm = 3;
+    card_num = 0;
     for (i=0; i<num_img*num_same_elm; i++) {
-        var foo = Math.ceil(Math.random() * 25);
+        var foo = Math.ceil(Math.random() * num_img);
         if (count_elm(foo) < num_same_elm) {
             img_li.push(foo)
         }
     }
 }
 
-function change_btn() {
-    if (img_li.length != 1) {
-        img_li.shift();
+async function change_btn() {
+    if (change_ok && img_li.length != 0) {
+        change_ok = false;
+        $('char').src = 'img/black.png';
+        await wait(1000);
+
         $('char').src = `img/${img_li[0]}.png`;
+        img_li.shift();
         card_num++;
+        change_ok = true;
     }
 }
 
 function card_num_reset() {
     card_num = 0;
-    $('char').src = '';
+    $('char').src = 'img/black.png';
 }
 
 function card_reset() {
     set_img_li();
-    $('char').src = `img/${img_li[0]}.png`;
+    $('char').src = 'img/black.png';
 }
 
 function player_plus_btn() {
@@ -93,4 +107,5 @@ window.onload = () => {
 setInterval(function() {
     $('card_num').innerText = '枚数: ' + card_num;
     $('li_len').innerText = '残り: ' + img_li.length;
+    $('range_num').innerText = $('how_many_kind_chars').value
 }, 16)
