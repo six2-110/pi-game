@@ -2,17 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>スイカゲーム</title>
-    <style>
-        #canvas{
-            background-color: #d2b48c;
-        }
-    </style>
+    <link rel="stylesheet" href="index.css">
+    <meta name="google-site-verification" content="08C-uv8cRM9PL-Xwv6x-6via7c97FNCnyTTkA5gdF3E" />
+    <title>ホーム</title>
+    <script>let site_name = 'index';</script>
 </head>
 <body>
-    <canvas width="500" height="800" id="canvas"></canvas>
+    
+    <div id="memo">
+        <h1>このサイトについて</h1>
+        <hr>
+        <p>このサイトでは筆者が気まぐれでゲームやツールを作るサイトです</p>
+        <p>ここからは収入を得ていません。</p>
+        <p>趣味です。</p>
+    </div>
 
-    <script src="app.js"></script>
+    <div id="main">
+        <div id="contents">
+            <h1 id="main_h1">すべてのコンテンツ</h1>
+        </div>
+        <div id="tag">
+            <h1>タグ</h1>
+            <table id="tag_table"></table>
+        </div>
+    </div>
+
+    <script src="info.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
